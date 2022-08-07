@@ -9,42 +9,59 @@ const ingredients = [
 
 const ingredientsEl = document.querySelector("#ingredients");
 console.log(ingredientsEl);
-const itemFirstEl = document.createElement("li");
-itemFirstEl.textContent = "Potatoes";
-console.log(itemFirstEl);
-itemFirstEl.classList.add("item");
 
-const itemSecondEl = document.createElement("li");
-itemSecondEl.textContent = "Mushrooms";
-itemSecondEl.classList.add("item");
-console.log(itemSecondEl);
+// const ingredient = ingredients[0];
 
-const itemThirdEl = document.createElement("li");
-itemThirdEl.textContent = "Garlic";
-console.log(itemThirdEl);
-itemThirdEl.classList.add("item");
+const elements = ingredients.map((option) => {
+  const ingrItemEl = document.createElement("li");
+  ingrItemEl.classList.add("item");
+  ingrItemEl.textContent = option;
 
-const itemFourthEl = document.createElement("li");
-itemFourthEl.textContent = "Tomatos";
-console.log(itemFourthEl);
-itemFourthEl.classList.add("item");
+  console.log(ingrItemEl);
+  return ingrItemEl;
+});
+console.log(elements);
+ingredientsEl.prepend(...elements);
+// -------------------
 
-const itemFifthEl = document.createElement("li");
-itemFifthEl.textContent = "Herbs";
-console.log(itemFifthEl);
-itemFifthEl.classList.add("item");
+// const ingredientsEl = document.querySelector("#ingredients");
+// console.log(ingredientsEl);
+// const itemFirstEl = document.createElement("li");
+// itemFirstEl.textContent = "Potatoes";
+// console.log(itemFirstEl);
+// itemFirstEl.classList.add("item");
 
-const itemSixthEl = document.createElement("li");
-itemSixthEl.textContent = "Condiments";
-console.log(itemSixthEl);
-itemSixthEl.classList.add("item");
+// const itemSecondEl = document.createElement("li");
+// itemSecondEl.textContent = "Mushrooms";
+// itemSecondEl.classList.add("item");
+// console.log(itemSecondEl);
 
-ingredientsEl.append(
-  itemFifthEl,
-  itemSecondEl,
-  itemThirdEl,
-  itemFourthEl,
-  itemFifthEl,
-  itemSixthEl
-);
-console.log(ingredientsEl);
+// const itemThirdEl = document.createElement("li");
+// itemThirdEl.textContent = "Garlic";
+// console.log(itemThirdEl);
+// itemThirdEl.classList.add("item");
+
+// const itemFourthEl = document.createElement("li");
+// itemFourthEl.textContent = "Tomatos";
+// console.log(itemFourthEl);
+// itemFourthEl.classList.add("item");
+
+// const itemFifthEl = document.createElement("li");
+// itemFifthEl.textContent = "Herbs";
+// console.log(itemFifthEl);
+// itemFifthEl.classList.add("item");
+
+// const itemSixthEl = document.createElement("li");
+// itemSixthEl.textContent = "Condiments";
+// console.log(itemSixthEl);
+// itemSixthEl.classList.add("item");
+
+// ingredientsEl.append(
+//   itemFifthEl,
+//   itemSecondEl,
+//   itemThirdEl,
+//   itemFourthEl,
+//   itemFifthEl,
+//   itemSixthEl
+// );
+// console.log(ingredientsEl);

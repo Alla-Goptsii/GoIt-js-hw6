@@ -1,0 +1,24 @@
+.image__list {
+  display: flex;
+  list-style: none;
+  background-color: aqua;
+}
+
+/* .image__item {
+  /* color: blueviolet; */
+/* border: 1px, red, solid;}  */
+.image__style {
+  width: 640px;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
