@@ -1,14 +1,22 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .image__list {
   display: flex;
   list-style: none;
-  background-color: aqua;
+  background-color: lightblue;
+  margin-left: 20px;
 }
 
-/* .image__item {
-  /* color: blueviolet; */
-/* border: 1px, red, solid;}  */
+.image__item {
+  border: 1px, red, solid;
+}
+
 .image__style {
-  width: 640px;
+  display: block;
 }
 
 #validation-input {

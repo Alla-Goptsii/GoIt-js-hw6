@@ -24,15 +24,23 @@ button {
 }
 
 /* ------- */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.image__item {
+  margin-left: 20px;
+  border: 2px solid rgb(126, 169, 188);
+}
 .image__list {
   display: flex;
   list-style: none;
-  background-color: aqua;
+  align-items: center;
+  background-color: lightblue;
 }
-/* -------- */
-.image__style {
-  width: 640px;
-}
+
 /* -------- */
 
 #validation-input {

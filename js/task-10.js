@@ -2,16 +2,21 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-// const inputRef = document.querySelector("input");
-// const btnCreateRef = document.querySelector("[data-create]");
-// const btnDestroyeRef = document.querySelector("[data-destroy]");
+// const elements = {
+//   divControls: document.querySelector("#controls"),
+//   input: document.querySelector("input"),
+//   buttonCreate: document.querySelector("button[data-create]"),
+//   buttonDestroy: document.querySelector("button[data-destroy]"),
+//   container: document.querySelector("#boxes"),
+// };
 
-// console.log(inputRef);
-// console.log(btnCreateRef);
-// console.log(btnDestroyeRef);
+const inputRef = document.querySelector("input");
+const btnCreateRef = document.querySelector("[data-create]");
+const btnDestroyeRef = document.querySelector("[data-destroy]");
 
-// const boxRef = document.querySelector("#boxes");
-// console.log(boxRef);
+console.dir(inputRef);
+console.log(btnCreateRef);
+console.log(btnDestroyeRef);
 
 const elements = {
   divEl: document.querySelector("#controls"),
@@ -21,24 +26,29 @@ const elements = {
   boxRef: document.querySelector("#boxes"),
 };
 
-// inputRef.addEventListener("input", xxx);
 elements.btnCreateRef.addEventListener("click", createBoxes);
-// btnDestroyeRef.addEventListener("click", yyy);
 
 let size = 30;
 
 function createBoxes() {
   let boxArr = [];
   let amount = elements.inputRef.value;
-  console.log(amount);
 
-  for (let i = 0; i <= amount; i = +1) {
-    const createEl = document.createElement("div");
-    createEl.classList.add("styles-box");
-    boxRef.append(createEl);
-    return boxArr.push(createEl);
+  for (let i = 0; i < amount; i += 1) {
+    let color = getRandomHexColor();
+
+    let divEl = `<div style = "width: ${size}px; height: ${size}px; background-color: ${color};"></div>`;
+    size += 10;
+    boxArr.push(divEl);
+    console.log(boxArr);
   }
+
+  elements.boxRef.insertAdjacentHTML("beforeend", boxArr.join(""));
 }
 
-// function xxx() {}
-// function yyy() {}
+elements.btnDestroyeRef.addEventListener("click", destroyBoxes);
+
+function destroyBoxes() {
+  elements.boxRef.innerHTML = "";
+  size = 30;
+}

@@ -15,7 +15,6 @@ const images = [
 
 const listEl = document.querySelector(".gallery");
 listEl.classList.add("image__list");
-console.log(listEl);
 
 const imagesEl = images
   .map(
@@ -23,5 +22,4 @@ const imagesEl = images
       `<li class="image__item"><img src ="${image.url} alt="${image.alt}" class="image__style"/></li>`
   )
   .join("");
-console.log(imagesEl);
 listEl.insertAdjacentHTML("beforeend", imagesEl);
