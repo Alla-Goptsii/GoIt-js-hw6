@@ -15,5 +15,4 @@ const elements = ingredients.map((option) => {
 
   return ingrItemEl;
 });
-console.log(elements);
 ingredientsEl.prepend(...elements);
